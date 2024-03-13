@@ -1,0 +1,33 @@
+<form class="grid-registracija" (ngSubmit)="registriraj()">
+  <label for="ime">Ime</label>
+  <input class="form-control" required type="text" [(ngModel)]="ime" name="ime">
+<br>
+  <label for="prezime">Prezime</label>
+  <input class="form-control" required type="text" [(ngModel)]="prezime" name="prezime">
+<br>
+  <label for="lozinka">Lozinka</label>
+  <input class="form-control" required type="password" [(ngModel)]="lozinka" name="lozinka">
+<br>
+  <label for="email">Email</label>
+  <input class="form-control" required type="email" [(ngModel)]="email" name="email">
+<br>
+  <label for="korime">Korisničko ime</label>
+  <input class="form-control" required type="text" [(ngModel)]="korime" name="korime">
+  <br>
+  <label for="spol">Spol</label>
+  <select class="form-control" name="spol" id="spol" [(ngModel)]="spol" name="spol">
+    <option value="Muški">Muški</option>
+    <option value="Ženski">Ženski</option>
+  </select>
+  <br>
+  <label for="datum_rodenja">Datum rođenja</label>
+  <input class="form-control" type="date" name="datum_rodenja" id="datum_rodenja" [(ngModel)]="datum_rodenja" name="datum_rodenja">
+  <br>
+  <label for="telefon">Broj telefona</label>
+  <input class="form-control" type="tel" name="telefon" id="telefon" [(ngModel)]="telefon" name="telefon">
+  <br>
+  <button mat-raised-button color="primary" type="submit" [ngStyle]="{'background-color': isUlogaAdmin ? 'green' : 'red'}">Registriraj se</button>
+
+
+<div *ngIf="poruka" class="error-message">{{ poruka }}</div>
+</form>

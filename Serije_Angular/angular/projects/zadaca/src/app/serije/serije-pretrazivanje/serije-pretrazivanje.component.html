@@ -1,0 +1,20 @@
+<input type="text" [(ngModel)]="filter" placeholder="Search..." (input)="onFilterChange()">
+
+<table class="serije-table"> 
+  <thead>
+    <tr>
+      <th>Naziv serije</th>
+      <th>Opis</th>
+      <th>Detalji</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let serija of serije.results">
+      <td>{{ serija.original_name }}</td>
+      <td>{{ serija.overview }}</td>
+      <td>
+        <button class="details-button" (click)="detaljiSerije(serija.id)">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

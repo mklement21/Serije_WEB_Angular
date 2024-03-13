@@ -1,0 +1,8 @@
+<div *ngIf="serijaDetalji">
+    <h1>{{ serijaDetalji.name }}</h1>
+    <p> {{ serijaDetalji.overview }}</p>
+    <p>Broj sezona: {{ serijaDetalji.number_of_seasons }}</p>
+    <p>Broj epizoda: {{ serijaDetalji.number_of_episodes }}</p>
+    <p>Popularnost: {{ serijaDetalji.popularity }}</p>
+    <img [src]="environment.posteriPutanja + serijaDetalji.poster_path">
+</div>

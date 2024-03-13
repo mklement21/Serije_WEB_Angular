@@ -1,0 +1,9 @@
+<div>
+  <label for="korimeUnos">Unesite korisničko ime korisnika za brisanje:</label>
+  <input type="text" id="korimeUnos" [(ngModel)]="korimeUnos" placeholder="Unesite korisničko ime">
+  <button (click)="obrisiKorisnika()">Obriši korisnika</button>
+</div>
+  
+<div *ngFor="let korisnik of korisnici">
+  {{ korisnik.id_korisnik }} - {{ korisnik.korime}} - {{ korisnik.ime }} {{ korisnik.prezime }} - {{ korisnik.email }}
+</div>

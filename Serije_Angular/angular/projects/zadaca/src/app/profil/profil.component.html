@@ -1,0 +1,56 @@
+<div *ngIf="korisnikPodaci">
+  <h2>Podaci o korisniku:</h2>
+  <div>
+    <strong>ID:</strong> {{ korisnikPodaci.id_korisnik }}<br>
+    <strong>Ime:</strong> {{ korisnikPodaci.ime }}<br>
+    <strong>Prezime:</strong> {{ korisnikPodaci.prezime }}<br>
+    <strong>Korime:</strong> {{ korisnikPodaci.korime }}<br>
+    <strong>Email:</strong> {{ korisnikPodaci.email }}<br>
+    <strong>Lozinka:</strong> {{ korisnikPodaci.lozinka }}<br>
+    <strong>Slika:</strong> {{ korisnikPodaci.slika }}<br>
+    <strong>Spol:</strong> {{ korisnikPodaci.spol }}<br>
+    <strong>Datum rođenja:</strong> {{ korisnikPodaci.datum_rodenja }}<br>
+    <strong>Telefon:</strong> {{ korisnikPodaci.telefon }}<br>
+    <strong>Opis:</strong> {{ korisnikPodaci.opis }}<br>
+    <strong>Broj favorita:</strong> {{ korisnikPodaci.br_favorita }}<br>
+    <strong>Uloga ID:</strong> {{ korisnikPodaci.uloga_id }}<br>
+    <button (click)="otvoriFormuZaUredivanje()">Uredi profil</button>
+  </div>
+
+
+  <br>
+  <div *ngIf="formaZaUredivanjeAktivna" >
+    <h2>Uredi profil:</h2>
+    <div class="forma">
+      <label for="ime">Ime:</label>
+      <input id="ime" [(ngModel)]="korisnikPodaci.ime" name="ime" required><br>
+
+      <label for="prezime">Prezime:</label>
+      <input id="prezime" [(ngModel)]="korisnikPodaci.prezime" name="prezime" required><br>
+
+      <label for="lozinka">Lozinka:</label>
+      <input id="lozinka" [(ngModel)]="korisnikPodaci.lozinka" name="lozinka" required><br>
+
+      <label for="slika">Slika:</label>
+      <input id="slika" [(ngModel)]="korisnikPodaci.slika" name="slika"><br>
+
+      <label for="spol">Spol:</label>
+      <input id="spol" [(ngModel)]="korisnikPodaci.spol" name="spol" required><br>
+
+      <label for="datum_rodenja">Datum rođenja:</label>
+      <input id="datum_rodenja" [(ngModel)]="korisnikPodaci.datum_rodenja" name="datum_rodenja"><br>
+
+      <label for="telefon">Telefon:</label>
+      <input id="telefon" [(ngModel)]="korisnikPodaci.telefon" name="telefon"><br>
+
+      <label for="opis">Opis:</label>
+      <input id="opis" [(ngModel)]="korisnikPodaci.opis" name="opis"><br>
+
+      <label for="br_favorita">Broj favorita:</label>
+      <input id="br_favorita" [(ngModel)]="korisnikPodaci.br_favorita" name="br_favorita" type="number"><br>
+
+      <button (click)="spremiPromjene()">Spremi promjene</button>
+      <button (click)="ponistiUredivanje()">Poništi</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "vjezba_03",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "scripts": {
+    "pripremi": "npm link --save express sqlite3 express-session cookie-parser",
+    "debug": "nodemon ./server/server.mjs ./server/serije.csv",
+    "start": "npm link --save express sqlite3 express-session cookie-parser && (node aplikacija/server.mjs serije.csv) && (cd angular && npm install -g @angular/cli && npm install && ng serve)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matea Klement",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/forms": "^17.0.8",
+    "cookie-parser": "file:../../../../../../usr/lib/node_modules/cookie-parser",
+    "cors": "^2.8.5",
+    "express": "file:../../../../../../usr/lib/node_modules/express",
+    "express-session": "file:../../../../../../usr/lib/node_modules/express-session",
+    "jsonwebtoken": "^9.0.2",
+    "ng-recaptcha": "^13.2.1",
+    "ngx-captcha": "^13.0.0",
+    "sqlite3": "file:../../../../../../usr/lib/node_modules/sqlite3"
+  },
+  "description": ""
+}

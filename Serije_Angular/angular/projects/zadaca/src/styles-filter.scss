@@ -1,0 +1,15 @@
+@import 'styles-boje';
+
+input {
+    color: rgb(0, 0, 0);
+    font-family: 'Georgia, "Times New Roman", Times, serif';
+    font-size: x-large;
+    border-radius: 80px;
+    padding: 20px;
+    width: 500px;
+    height: 10px;
+  }
+
+.input-background {
+   background-color: $input-background-color;
+}

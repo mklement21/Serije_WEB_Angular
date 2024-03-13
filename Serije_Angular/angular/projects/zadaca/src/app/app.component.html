@@ -1,0 +1,14 @@
+<header>VIP serije</header>
+<nav class="navigacija">
+  <a href="/" (click)="putanja='pocetna'">Početna</a>
+  <a href="/serijePretrazivanje" (click)="putanja='serijePretrazivanje'">Serije pretraživanje</a>
+  <a href="/korisnici" (click)="putanja='korisnici'" *ngIf="autentifikacijaService.isPrijavljen() && autentifikacijaService.isUlogaAdmin()">Korisnici</a>
+  <a href="/registracija" (click)="putanja='registracija'" *ngIf="!autentifikacijaService.isPrijavljen() || autentifikacijaService.isUlogaAdmin()">Registracija</a>
+  <a href="/prijava" (click)="putanja='prijava'" *ngIf="!autentifikacijaService.isPrijavljen()">Prijava</a>
+  <a href="/profil" (click)="putanja='profil'" *ngIf="autentifikacijaService.isPrijavljen()">Moj profil</a>
+  <a href="#" (click)="odjava()" *ngIf="autentifikacijaService.isPrijavljen()">Odjava</a>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer>Matea Klement &copy; 2023</footer>

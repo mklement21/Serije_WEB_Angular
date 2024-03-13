@@ -1,0 +1,27 @@
+<form (ngSubmit)="prijavi()" novalidate>
+  <div>
+    <label for="korime">Korisničko ime</label>
+    <input id="korime" name="korime" type="text" [(ngModel)]="korime" required>
+  </div>
+
+  <div>
+    <label for="lozinka">Lozinka</label>
+    <input id="lozinka" name="lozinka" type="password" [(ngModel)]="lozinka" required>
+  </div>
+
+  <div>
+    <button type="submit">Pošalji</button>
+  </div>
+
+  
+  <div *ngIf="greska" class="error-message">
+    {{ greska }}
+  </div>
+</form>
+
+<div>
+  <p>admin     -  rwa</p>
+  <p>obican    -  rwa</p>
+  <p>moderator -  rwa </p>
+  <p> unijeti ovu lozinku :) 2317c5cc4e67b0cb5f55b26fdcf5fe0a24012503ae99d22b26f3c866d281be2b</p>
+</div>

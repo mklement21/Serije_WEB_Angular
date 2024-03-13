@@ -1,0 +1,46 @@
+@import 'styles-boje';
+
+@mixin common-styles {
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  align-items: center;
+  font-family: 'Georgia, "Times New Roman", Times, serif';
+  font-size: x-large;
+  font-style: oblique;
+  line-height: 3;
+}
+
+header {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+
+@mixin nav-link-styles {
+  background-color: $nav-color;
+  font-size: larger;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-text-color;
+    font-weight: bold;
+  }
+}
+
+
+* {
+  @include common-styles;
+  background-color: $background-color;
+}
+
+.navigacija {
+ border-radius: 30px;
+ background-color: $nav-color;
+  a {
+    @include nav-link-styles;
+    display: inline-block;
+    padding: 10px 10px;
+  }
+}
